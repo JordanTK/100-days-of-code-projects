@@ -1,2 +1,2 @@
-# Python-project-and-exercise-files
-all the work I have done in one place
+# 100 days of code 
+following the udemy course
