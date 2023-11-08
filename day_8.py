@@ -1,7 +1,7 @@
 # Caesar Cipher
 
 # import the logo
-from art import logo
+from art_8 import logo
 
 # Defining the encryption and decryption process for letters only
 def caesar(text, shift, direction):
