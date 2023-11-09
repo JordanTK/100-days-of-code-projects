@@ -7,7 +7,7 @@ from art_9 import logo
 from os import system
 
 # Logo and greeting
-print(logo)
+print(logo +"\n")
 print("Welcome to the secret auction program.")
 
 # Creating the data structure namely a dictionary to store the bidders and their bid
