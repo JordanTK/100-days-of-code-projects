@@ -2,6 +2,7 @@
 from art_14 import logo, vs
 from game_data_14 import data
 from random import sample
+from os import system
 
 # Getting a random dictionary from the data
 datas = sample(data, 2)
@@ -34,5 +35,7 @@ while keep_going:
     
     else:
         break
+    
+    system("clear")
 print(logo)
 print(f"Sorry, that's wrong. Final score: {score}")
