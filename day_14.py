@@ -1,3 +1,5 @@
+# Higher Lower game
+
 # Import the logo and the game data plus a function for picking a random integer in a given range
 from art_14 import logo, vs
 from game_data_14 import data
@@ -35,7 +37,7 @@ while keep_going:
     
     else:
         break
-    
+
     system("clear")
 print(logo)
 print(f"Sorry, that's wrong. Final score: {score}")
