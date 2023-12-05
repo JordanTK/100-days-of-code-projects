@@ -10,14 +10,18 @@ screen.tracer(n = 0)
 
 pesho = Snake()
 
+screen.listen()
+screen.onkey(key="Left", fun = pesho.left)
+screen.onkey(key="Right", fun = pesho.right)
+screen.onkey(key="Up", fun = pesho.up)
+screen.onkey(key="Down", fun = pesho.down)
+
 game_is_on = True
 while game_is_on:
     screen.update()
-    screen.listen()
-    screen.onkey(key="Left", fun = pesho.turn_left)
-    screen.onkey(key="Right", fun = pesho.turn_right)
-    screen.onkey(key="Up", fun = pesho.move_forward)
-    screen.onkey(key="Down", fun = pesho.move_backward)
+    time.sleep(0.1)
+
+    pesho.move()
     
 
 screen.exitonclick()
