@@ -1,5 +1,6 @@
 from turtle import Turtle,Screen
 import time
+STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
 UP = 90
 DOWN = 270
@@ -11,14 +12,24 @@ class Snake:
         self.create_snake()
         self.head = self.body[0]
 
+     
+     def add_square(self, position):
+         square = Turtle()
+         square.shape("square")
+         square.color("white")
+         square.penup()
+         square.goto(position)
+         self.body.append(square)
+
      def create_snake(self):
-        for position in range(3):
-            square = Turtle()
-            square.shape("square")
-            square.color("white")
-            square.penup()
-            square.goto((-position*20,0))
-            self.body.append(square)
+        for position in STARTING_POSITIONS:
+            self.add_square(position)
+            
+             
+     def extend(self):
+         self.add_square(self.body[-1].position())
+         
+         
      
      def move(self):
         for part in range(len(self.body) - 1, 0, -1):
